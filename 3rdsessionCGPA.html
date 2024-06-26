@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CGPA Calculator</h1>
+    <div class="form-group">
+        <label for="totalCourses">Enter the total number of courses:</label>
+        <input type="number" id="totalCourses" min="1">
+        <button onclick="generateCourseInputs()">Submit</button>
+    </div>
+    <form id="coursesForm" onsubmit="calculateCGPA(event)">
+        <div id="coursesContainer"></div>
+        <button type="submit">Calculate CGPA</button>
+    </form>
+    <h2 id="result"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
